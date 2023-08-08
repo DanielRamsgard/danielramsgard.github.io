@@ -1,0 +1,49 @@
+.image-container {
+    position: relative;
+    height: 197px;
+    overflow: auto;
+}
+
+.hover-image {
+    opacity: 0; /* Set the hover image opacity to 0 by default */
+    transition: opacity 1.3s ease; /* Add a transition for the opacity property */
+}
+
+.image-container:hover .default-image {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0; /* Hide the default image on hover */
+}
+
+.image-container:hover .hover-image {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.border {
+    background-image: linear-gradient(rgba(4, 9, 30, .7), rgab(4, 9, 30, .7), url(circuit_boards_1.png))
+}
+
+.image_1 {
+    width:100%; 
+    object-fit: cover;
+}
+
+.big-monty {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.light-nuni {
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 100; 
+    line-height: 2;
+}
+
+.absolute-box {
+    position: absolute;
+    
+  }
