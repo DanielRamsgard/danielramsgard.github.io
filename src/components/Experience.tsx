@@ -9,6 +9,7 @@ const Experience = () => {
       location: "Chapel Hill, NC",
       period: "Jul 2024 – Present",
       type: "On-site",
+      link: "https://www.govaluate.com/",
       highlights: [
         "Scaled from 1.7k to 10M+ requests (270+ users, 10k+ answers graded, 18k+ code runs)",
         "Managed 3,000+ Cloud Deployments and 6,000+ GitHub Contributions",
@@ -23,6 +24,7 @@ const Experience = () => {
       location: "Skaneateles, NY",
       period: "May 2025 – Present",
       type: "Remote",
+      link: "https://www.lsas-tec.com/",
       highlights: [
         "Served clients including NASA, Blue Origin, and global space agencies",
         "Built Go (Echo) systems with Auth0/GCP/OAuth 2.0 authentication",
@@ -37,6 +39,7 @@ const Experience = () => {
       location: "Chapel Hill, NC",
       period: "Oct 2023 – Jan 2025",
       type: "On-site",
+      link: "https://doi.org/10.1126/sciadv.adq9358",
       highlights: [
         "Published paper in Science Advances with 4,000+ downloads",
         "Co-authored research on near-infrared spectroscopy biomechanics mapping",
@@ -50,6 +53,7 @@ const Experience = () => {
       location: "Skaneateles, NY",
       period: "May 2024 – Jul 2024",
       type: "Remote",
+      link: "https://scale.com/",
       highlights: [
         "Designed training data for OpenAI's ChatGPT model",
         "Created REST-API-focused datasets for Large Language Models",
@@ -57,6 +61,19 @@ const Experience = () => {
       ]
     }
   ];
+
+   const handleClick = (event: React.MouseEvent<HTMLDivElement>, link: string) => {
+    if (!link) return; // no link, do nothing
+
+    // Check if Cmd (metaKey) or Ctrl is pressed
+    if (event.metaKey || event.ctrlKey) {
+      // open in new tab
+      window.open(link, '_blank');
+    } else {
+      // open in same tab
+      window.location.href = link;
+    }
+  };
 
   return (
     <section className="py-20 px-4">
@@ -70,7 +87,7 @@ const Experience = () => {
         
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="group relative">
+            <div key={index} className="group relative" onClick={(e) => handleClick(e, exp.link)}>
               <div className="absolute left-4 top-8 w-px h-full bg-gradient-to-b from-blue-400 to-purple-400 group-last:hidden"></div>
               <div className="absolute left-2 top-8 w-4 h-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full border-4 border-slate-900"></div>
               
