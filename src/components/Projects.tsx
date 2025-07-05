@@ -1,11 +1,13 @@
 import React from 'react';
 import { Code, Github, Projector } from 'lucide-react';
+import handleClickNav from '../functions.tsx/handleClickNav';
 
 const Projects = () => {
   const projects = [
     {
       title: "Microservices E-Commerce Store",
       description: "Full-stack e-commerce platform with microservices architecture, featuring AWS cloud integration and containerized deployment.",
+      link: "https://dac235ohvwvlv.cloudfront.net/",
       technologies: ["FastAPI", "React.js", "MySQL", "Nginx", "Uvicorn", "Docker", "Railway", "AWS"],
       highlights: [
         "Leveraged AWS S3 and CloudFront for rapid content delivery",
@@ -17,6 +19,7 @@ const Projects = () => {
     {
       title: "Microservices Travel Booking Site",
       description: "Comprehensive travel booking platform with extensive location database and real-time flight/hotel search capabilities.",
+      link: "https://d38aezgot1todg.cloudfront.net/",
       technologies: ["Flask", "React.js", "MongoDB", "Railway", "AWS Lambda", "API Gateway", "S3", "CloudFront"],
       highlights: [
         "Query over 148,000 locations and 6,700 airports",
@@ -39,7 +42,7 @@ const Projects = () => {
         
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+            <div onClick={(e) => handleClickNav(e, project.link)} key={index} className="group p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105" style={{ cursor: "pointer" }}>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg">
                   <Projector className="w-5 h-5 text-white" />

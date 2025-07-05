@@ -1,5 +1,6 @@
 import React from 'react';
 import { Briefcase, MapPin, Calendar } from 'lucide-react';
+import handleClickNav from '../functions.tsx/handleClickNav';
 
 const Experience = () => {
   const experiences = [
@@ -62,19 +63,6 @@ const Experience = () => {
     }
   ];
 
-   const handleClick = (event: React.MouseEvent<HTMLDivElement>, link: string) => {
-    if (!link) return; // no link, do nothing
-
-    // Check if Cmd (metaKey) or Ctrl is pressed
-    if (event.metaKey || event.ctrlKey) {
-      // open in new tab
-      window.open(link, '_blank');
-    } else {
-      // open in same tab
-      window.location.href = link;
-    }
-  };
-
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -87,7 +75,7 @@ const Experience = () => {
         
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="group relative" onClick={(e) => handleClick(e, exp.link)}>
+            <div onClick={(e) => handleClickNav(e, exp.link)} key={index} className="group relative" style={{ cursor: "pointer" }}>
               <div className="absolute left-4 top-8 w-px h-full bg-gradient-to-b from-blue-400 to-purple-400 group-last:hidden"></div>
               <div className="absolute left-2 top-8 w-4 h-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full border-4 border-slate-900"></div>
               
