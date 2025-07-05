@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, Github, Projector } from 'lucide-react';
-import handleClickNav from '../functions.tsx/handleClickNav';
+import handleClickNav from '../functions/handleClickNav';
 
 const Projects = () => {
   const projects = [

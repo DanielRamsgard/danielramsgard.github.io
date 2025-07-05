@@ -1,6 +1,6 @@
 import React from 'react';
 import { Briefcase, MapPin, Calendar } from 'lucide-react';
-import handleClickNav from '../functions.tsx/handleClickNav';
+import handleClickNav from '../functions/handleClickNav';
 
 const Experience = () => {
   const experiences = [

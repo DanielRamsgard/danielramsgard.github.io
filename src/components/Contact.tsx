@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, MapPin, Github, Linkedin } from 'lucide-react';
+import getCurrentYear from '../functions/currentYear';
 
 const Contact = () => {
   const contactInfo = [
@@ -87,7 +88,7 @@ const Contact = () => {
         
         <div className="text-center mt-12 pt-8 border-t border-white/10">
           <p className="text-gray-400">
-            © 2024 Daniel Ramsgard. Built with React and Tailwind CSS.
+            © {getCurrentYear()} Daniel Ramsgard. Built with React.ts and Tailwind CSS.
           </p>
         </div>
       </div>

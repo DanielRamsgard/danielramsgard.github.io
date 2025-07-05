@@ -3,7 +3,7 @@ import { Code, Users, Briefcase } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: Code, label: "Lines of Code", value: "250K+" },
+    { icon: Code, label: "Lines of Code", value: "100K+" },
     { icon: Users, label: "Users Served", value: "270+" },
     { icon: Briefcase, label: "Years Experience", value: "3+" }
   ];
@@ -26,13 +26,12 @@ const About = () => {
               technology from serving hundreds to millions of requests.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              My experience spans from building AI-powered autograding systems to developing satellite 
+              My experience spans from building AI-powered autograding systems to developing satellite-rocket 
               visualization tools for space agencies including NASA and Blue Origin. I specialize in 
               cloud-native architectures, microservices, and full-stack development.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              When I'm not coding, you'll find me contributing to open source projects, researching 
-              cutting-edge technologies, or mentoring fellow developers in the community.
+              When I'm not coding, you'll find me working on side projects, researching cutting-edge technologies, or learning from fellow developers in the community.
             </p>
           </div>
           
