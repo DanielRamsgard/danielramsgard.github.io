@@ -9,13 +9,13 @@ const Education = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Education
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-black mx-auto"></div>
         </div>
         
         <div className="max-w-4xl mx-auto">
           <div className="p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
             <div className="flex items-center space-x-4 mb-6">
-              <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg">
+              <div className="p-3 bg-gradient-to-r from-blue-500 to-black rounded-lg">
                 <School className="w-6 h-6 text-white" />
               </div>
               <div className="flex-1">
@@ -59,7 +59,7 @@ const Education = () => {
                 ].map((course, index) => (
                   <span 
                     key={index}
-                    className="px-3 py-2 bg-gradient-to-r from-blue-500/20 to-purple-600/20 text-blue-300 text-sm rounded-lg border border-blue-500/30"
+                    className="px-3 py-2 bg-gradient-to-r from-blue-500/20 to-black/20 text-blue-300 text-sm rounded-lg border border-blue-500/30"
                   >
                     {course}
                   </span>

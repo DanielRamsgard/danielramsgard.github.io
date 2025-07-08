@@ -37,14 +37,14 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Featured Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-black mx-auto"></div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div onClick={(e) => handleClickNav(e, project.link)} key={index} className="group p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105" style={{ cursor: "pointer" }}>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg">
+                <div className="p-2 bg-gradient-to-r from-blue-500 to-black rounded-lg">
                   <Projector className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white">{project.title}</h3>
@@ -59,7 +59,7 @@ const Projects = () => {
                 <ul className="space-y-1">
                   {project.highlights.map((highlight, idx) => (
                     <li key={idx} className="flex items-start space-x-2 text-gray-300 text-sm">
-                      <div className="w-1 h-1 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-1 h-1 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
                       <span>{highlight}</span>
                     </li>
                   ))}
@@ -68,7 +68,7 @@ const Projects = () => {
               
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-600/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
+                  <span key={idx} className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-black/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
                     {tech}
                   </span>
                 ))}

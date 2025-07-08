@@ -4,12 +4,12 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-10 relative overflow-hidden">
-      {/* Background gradient animation */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-teal-600/20 animate-pulse" />
+      {/* Subtle light overlay to brighten the section */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-50/5 to-transparent" />
 
       <div className="text-center z-10 max-w-4xl w-full">
         <div className="mb-8 animate-fade-in px-2">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-teal-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-500 bg-clip-text text-transparent">
             Daniel Ramsgard
           </h1>
           <h2 className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6">
@@ -39,7 +39,7 @@ const Hero = () => {
           </a>
           <a 
             href="mailto:dramsgard@gmail.com" 
-            className="flex items-center space-x-2 px-5 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+            className="flex items-center space-x-2 px-5 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-300 hover:scale-105"
           >
             <Mail className="w-5 h-5 text-white" />
             <span className="text-white font-medium">Contact</span>

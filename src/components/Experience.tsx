@@ -70,14 +70,14 @@ const Experience = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Experience
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-black mx-auto"></div>
         </div>
         
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <div onClick={(e) => handleClickNav(e, exp.link)} key={index} className="group relative" style={{ cursor: "pointer" }}>
-              <div className="absolute left-4 top-8 w-px h-full bg-gradient-to-b from-blue-400 to-purple-400 group-last:hidden"></div>
-              <div className="absolute left-2 top-8 w-4 h-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full border-4 border-slate-900"></div>
+              <div className="absolute left-4 top-8 w-px h-full bg-gradient-to-b from-blue-400 to-black group-last:hidden"></div>
+              <div className="absolute left-2 top-8 w-4 h-4 bg-gradient-to-r from-blue-400 to-black rounded-full border-4 border-slate-900"></div>
               
               <div className="ml-12 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
@@ -100,7 +100,7 @@ const Experience = () => {
                 <ul className="space-y-2">
                   {exp.highlights.map((highlight, idx) => (
                     <li key={idx} className="flex items-start space-x-3 text-gray-300">
-                      <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="leading-relaxed">{highlight}</span>
                     </li>
                   ))}
